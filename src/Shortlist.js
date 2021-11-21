@@ -17,7 +17,7 @@ const Shortlist = () => {
         
         <div className="applicant-list">
   
-  <h2>Shortlisted Applicants</h2>
+  <h2>Shortlisted Candidates</h2>
         {arr.map((applicant)  => (
         
                 check(applicant)

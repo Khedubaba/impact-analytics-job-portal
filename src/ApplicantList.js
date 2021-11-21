@@ -55,13 +55,11 @@ const [filteredData, setFilteredData] = useState(data);
           value={wordEntered}
           onChange={handleFilter}
         />
-        {/* <div className="searchIcon">
-          {filteredData.length === 0 ? (
-            <SearchIcon />
-          ) : (
-            <CloseIcon id="clearBtn" onClick={clearInput} />
-          )}
-        </div> */}
+        {
+          filteredData.length === 0 && (
+            <p>No candidate found.</p>
+          )
+        }
       </div>
       {filteredData.length != 0 && (
         <div className="applicant-list">
@@ -102,14 +100,11 @@ const [filteredData, setFilteredData] = useState(data);
 
 
 return(
-        <div className="applicant-list" >
-          
-          {/* <div class="one"> */}
-            <h1 className="page-titleh1">{title}</h1>
-          {/* </div> */}
+        <div className="one" >
+            <h2>{title}</h2>
           <br/>
-     
-          <center><SearchBar placeholder="Search by Candidate Name" data={applicants} /></center>
+    
+          <center><SearchBar placeholder="Search Candidate..." data={applicants} /></center>
 
           
            
